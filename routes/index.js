@@ -21,3 +21,28 @@ router.get("/movies", (req, res, next) => {
       next(error);
     });
 });
+
+// GET movie/:id => render one movie details (image, title, director, stars, description, showtime) by its id
+
+router.get("/movie/:id", (req, res, next) => {
+  const { id } = req.params;
+  MovieModel.findById(id)
+    .then((response) => {
+      const { image, title, director, stars, description, showtimes } =
+        response;
+
+      res.render("movie.hbs", {
+        movieDetails: {
+          image,
+          title,
+          director,
+          stars,
+          description,
+          showtimes: showtimes.join(" | "),
+        },
+      });
+    })
+    .catch((error) => {
+      next(error);
+    });
+});

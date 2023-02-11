@@ -1,17 +1,17 @@
 <header>
-    <h1>{{title}}</h1>
-    <h2>Click on the movie to check the showtimes</h2>
-    <a href="/">HOME</a>
+  <h1>{{title}}</h1>
+  <h2>Click on the movie to check the showtimes</h2>
+  <a href="/">HOME</a>
 </header>
 
 <main>
-    <ul>
-        {{#each movieList}}
-        <li>
-            <img src={{this.image}} alt="Movie poster from {{this.title}}" width="100">
-            <h3>{{this.title}}</h3>
-            <a href="/">See more</a>
-        </li>
-        {{/each}}
-    </ul>
+  <ul>
+    {{#each movieList}}
+    <li>
+      {{>movieImage this}}
+      <h3>{{this.title}}</h3>
+      <a href="/movie/{{this.id}}">See more</a>
+    </li>
+    {{/each}}
+  </ul>
 </main>

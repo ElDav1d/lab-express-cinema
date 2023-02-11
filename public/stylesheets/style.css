@@ -1,8 +1,82 @@
+html {
+  height: 100%;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.home-background {
+  background-image: url(../images/cinema.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 1rem;
+}
+
+.home-container {
+  text-align: center;
+}
+
+.home-heading {
+  color: white;
+  font-size: 4.25rem;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 2.25rem;
+}
+
+.home-link {
+  background-color: white;
+  border-radius: 99rem;
+  color: #679dad;
+  font-size: 1.25rem;
+  padding: 1rem 2.25rem;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .home-heading {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-background {
+    display: block;
+  }
+
+  .home-container {
+    margin-left: 55vw;
+    margin-top: 25vh;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-heading {
+    font-size: 7.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .home-container {
+    margin-left: 57vw;
+    margin-top: 18vh;
+  }
+
+  .home-link {
+    font-size: 1.25rem;
+    padding: 1.5rem 3rem;
+  }
 }

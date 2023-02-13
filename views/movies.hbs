@@ -5,11 +5,11 @@
 </header>
 
 <main>
-  <ul>
+  <ul class="movie-list">
     {{#each movieList}}
-    <li>
+    <li class="movie-item">
       {{>movieImage this}}
-      <h3>{{this.title}}</h3>
+      <h3 class="movie-title">{{this.title}}</h3>
       <a href="/movie/{{this.id}}">See more</a>
     </li>
     {{/each}}

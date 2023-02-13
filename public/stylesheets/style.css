@@ -65,7 +65,7 @@ a {
   width: 100%;
 }
 
-.movie-item {
+.movie-list-item {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -73,6 +73,27 @@ a {
 .movie-title {
   font-size: 1rem;
   margin: 0.75rem 0;
+}
+
+.movie-details .movie-image {
+  display: block;
+  width: 10rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-left: auto;
+}
+
+.movie-details-header {
+  text-align: center;
+}
+
+.movie-details-heading {
+  font-size: 1.5rem;
+  margin: 0.75rem 0;
+}
+.movie-details-subheading {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -85,11 +106,6 @@ a {
     font-size: 6rem;
     margin-bottom: 3rem;
   }
-
-  .movie-list {
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 1.25rem;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -101,6 +117,35 @@ a {
     margin-left: 55vw;
     margin-top: 25vh;
     text-align: left;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.25rem;
+  }
+
+  .movie-details {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .movie-details .movie-image {
+    margin: 0;
+    width: 75%;
+    height: 75%;
+  }
+
+  .movie-details-header {
+    text-align: left;
+  }
+
+  .movie-details-heading {
+    font-size: 1.5rem;
+    margin: 0.75rem 0;
+  }
+  .movie-details-subheading {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
   }
 }
 

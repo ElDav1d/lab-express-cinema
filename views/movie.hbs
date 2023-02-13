@@ -1,23 +1,27 @@
-<main>
+<main class="movie-details">
   {{>movieImage movieDetails}}
-  <section>
-    <a href="/movies">Go back</a>
-    <h1>{{movieDetails.title}}</h1>
-    <h2>Director: {{movieDetails.director}}</h2>
-  </section>
+  <article>
+    <section class="movie-details-header">
+      <a href="/movies">Go back</a>
+      <h1 class="movie-details-heading">{{movieDetails.title}}</h1>
+      <h2 class="movie-details-subheading">Director: {{movieDetails.director}}</h2>
+    </section>
 
-  <section>
-    <h3>Stars</h3>
-    <ul>
-      {{#each movieDetails.stars}}
-      <li>
-        {{this}}
-      </li>
-      {{/each}}
-    </ul>
-  </section>
-  <section>
-    <p>{{movieDetails.description}}</p>
-    <p>{{movieDetails.showtimes}}</p>
-  </section>
+    <section>
+      <h3>Stars</h3>
+      <ul>
+        {{#each movieDetails.stars}}
+        <li>
+          {{this}}
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+    <section>
+      <h3>Description</h3>
+      <p>{{movieDetails.description}}</p>
+      <h3>Showtimes</h3>
+      <p>{{movieDetails.showtimes}}</p>
+    </section>
+  </article>
 </main>
